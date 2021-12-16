@@ -10,6 +10,7 @@
     <modules>
         <module>ember-common</module>
         <module>ember-admin</module>
+        <module>ember-system</module>
     </modules>
     <!--设置为pom，管理依赖-->
     <packaging>pom</packaging>
@@ -32,6 +33,8 @@
         <commons.fileupload.version>1.4</commons.fileupload.version>
         <poi.version>4.1.2</poi.version>
         <velocity.version>2.3</velocity.version>
+        <servlet.version>4.0.1</servlet.version>
+        <jsp.version>2.1</jsp.version>
     </properties>
     <!--统一管理项目依赖版本-->
     <dependencyManagement>
@@ -84,7 +87,6 @@
                 <artifactId>UserAgentUtils</artifactId>
                 <version>${bitwalker.version}</version>
             </dependency>
-
             <!-- SpringBoot集成mybatis框架 -->
             <dependency>
                 <groupId>org.mybatis.spring.boot</groupId>
@@ -185,7 +187,6 @@
             <dependency>
                 <groupId>org.apache.velocity</groupId>
                 <artifactId>velocity-engine-core</artifactId>
-                <version>2.2</version>
             </dependency>
             <!--mysql驱动-->
             <dependency>
@@ -202,6 +203,18 @@
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <optional>true</optional>
+            </dependency>
+            <!--            servlet-->
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>javax.servlet-api</artifactId>
+                <version>${servlet.version}</version>
+            </dependency>
+            <!--            jsp-->
+            <dependency>
+                <groupId>javax.servlet.jsp</groupId>
+                <artifactId>javax.servlet.jsp-api</artifactId>
+                <version>${jsp.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
